@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "battle-school-lunch-backend"
+version = "0.1.0"
+description = "NEIS lunch lookup and multi-agent lunch battle analysis API"
+requires-python = ">=3.11"
+dependencies = [
+  "agent-framework==1.14.0",
+  "agent-framework-ag-ui==1.1.0",
+  "fastapi==0.139.2",
+  "httpx==0.28.1",
+  "mcp>=1.29.0,<2",
+  "pydantic>=2.13.4,<3",
+  "uvicorn[standard]==0.35.0"
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest==8.4.1",
+  "pytest-asyncio==1.1.0"
+]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["app*"]
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+testpaths = ["tests"]
