@@ -12,7 +12,7 @@ dependencies = [
   "agent-framework-ag-ui==1.1.0",
   "fastapi==0.139.2",
   "httpx==0.28.1",
-  "mcp>=1.29.0,<2",
+  "mcp>=1.29.0,<3",
   "pydantic>=2.13.4,<3",
   "uvicorn[standard]==0.35.0"
 ]
